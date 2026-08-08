@@ -123,10 +123,19 @@ class ConsoleView:
             return current_value
 
     @staticmethod
-    def display_diagnostic_report(patient_id: int, score: int, category: str) -> None:
-        print("\n" + "*"*40 + "\n          DIAGNOSTIC RISK REPORT\n" + "*"*40)
-        print(f" Patient ID:       {patient_id}\n Cumulative Score: {score} pts\n Risk Category:    {category.upper()}")
-        print("*"*40)
+    @staticmethod
+def display_diagnostic_report(patient_id: int, score: int, category: str) -> None:
+    print("\n" + "*" * 50)
+    print("-" * 50)
+    print("              DIAGNOSTIC RISK REPORT")
+    print("-" * 50)
+    print(f" Patient ID:       {patient_id}")
+    print(f" Cumulative Score: {score} pts")
+    print(f" Risk Category:    {category.upper()}")
+    print("-" * 50)
+    print("          *** CONFIDENTIAL MEDICAL RECORD ***")
+    print("-" * 50)
+    print("*" * 50)
 
 
 # =====================================================================
